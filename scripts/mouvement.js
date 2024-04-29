@@ -24,6 +24,10 @@ addEventListener("keydown", function(e){
     if (e.code == 'KeyA') vxl = -1;
     if (e.code == 'KeyW') vyu = -1;
     if (e.code == 'KeyS') vyd = 1;
+    if (e.code == 'ArrowRight') vxr = 1;
+    if (e.code == 'ArrowLeft') vxl = -1;
+    if (e.code == 'ArrowUp') vyu = -1;
+    if (e.code == 'ArrowDown') vyd = 1;
     if (e.code == 'Space') { 
         const projectile = new Projectile(x+2.5, y, 0, -2); 
         projectiles.push(projectile); // Ajout du projectile au tableau
@@ -35,5 +39,8 @@ addEventListener("keyup", function(e){
     if (e.code == 'KeyA') vxl = 0;
     if (e.code == 'KeyW') vyu = 0;
     if (e.code == 'KeyS') vyd = 0;
-
+    if (e.code == 'ArrowRight') vxr = 0;
+    if (e.code == 'ArrowLeft') vxl = 0;
+    if (e.code == 'ArrowUp') vyu = 0;
+    if (e.code == 'ArrowDown') vyd = 0;
 })
