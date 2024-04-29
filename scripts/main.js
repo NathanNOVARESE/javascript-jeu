@@ -27,6 +27,19 @@ function update(){
 }
 
 
+var timer;
+var ele = document.getElementById('timer');
+
+(function () {
+    var sec = 0;
+    timer = setInterval(() => {
+        var minutes = Math.floor(sec / 60);
+        var seconds = sec % 60;
+        ele.innerHTML = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+        sec++;
+    }, 1000); // chaque 1 seconde
+})();
+
 
 const projectiles = []; // Tableau pour stocker les projectiles
 
