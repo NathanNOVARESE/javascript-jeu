@@ -28,6 +28,7 @@ addEventListener("keydown", function(e){
     if (e.code == 'ArrowLeft') vxl = -1;
     if (e.code == 'ArrowUp') vyu = -1;
     if (e.code == 'ArrowDown') vyd = 1;
+    console.log(e.code)
     if (e.code == 'Space') { 
         const projectile = new Projectile(x+2.5, y, 0, -2); 
         projectiles.push(projectile); // Ajout du projectile au tableau
