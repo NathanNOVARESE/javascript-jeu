@@ -11,6 +11,17 @@
     height: 100%;
 }
 
+.control{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    border: black 2px solid;
+    background-color: white;
+    top: 5rem;
+    left: 5rem;
+}
+
 .fond {
     z-index: 0;
     position: absolute;
@@ -63,10 +74,4 @@
     background-color: #fff;
     border: 5px solid black;
     transform: skewX(-20deg); 
-}
-
-
-.control {
-    display: flex;
-    
 }

@@ -3,7 +3,7 @@ console.log("Main.js loaded")
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
-let x = 43.5;
+let x = canvas.width/2-5;
 let y = 125;
 let vxl = 0;
 let vxr = 0;
