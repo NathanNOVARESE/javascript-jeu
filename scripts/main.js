@@ -57,4 +57,33 @@ var ele = document.getElementById('timer');
 
 const projectiles = []; // Tableau pour stocker les projectiles
 
+document.addEventListener("keydown", function(event) {
+    const key = event.key.toLowerCase();
+    const validKeys = ['z', 'q', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'];
+  
+    if (key === ' ') {
+      event.preventDefault(); // Empêche le défilement de la page lorsque la barre d'espace est utilisée
+      document.getElementById('space').style.backgroundColor = "yellow";
+    } else if (validKeys.includes(key)) {
+      event.preventDefault(); // Empêche le défilement de la page lors de l'utilisation des touches fléchées
+      document.getElementById(key).style.backgroundColor = "yellow";
+    }
+  });
+  
+  document.addEventListener("keyup", function(event) {
+    const key = event.key.toLowerCase();
+    const validKeys = ['z', 'q', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright'];
+  
+    if (key === ' ') {
+      document.getElementById('space').style.backgroundColor = "black";
+    } else if (validKeys.includes(key)) {
+      document.getElementById(key).style.backgroundColor = "black";
+    }
+  });
+  
+  
+  
+  
+  
+
 update()
